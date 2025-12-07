@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Programs – GHEI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{--ghei-navy:#0a2342;--ghei-red:#d7263d;}
+  body{font-family:Inter;}
+  .text-ghei{color:var(--ghei-navy);}
+  .nav-item{position:relative;}
+  .nav-dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:white;border-radius:.75rem;
+    box-shadow:0 10px 30px rgba(15,23,42,.12);padding:.5rem 0;}
+  .nav-item:hover .nav-dropdown{display:block;}
+  .container-1200{max-width:1200px;margin:auto;padding:0 1.25rem;}
+</style>
+</head>
+
+<body class="bg-white">
+
+<!-- NAVBAR (same as others) -->
+<header class="sticky top-0 bg-white/90 backdrop-blur border-b border-slate-200 z-30">
+  <div class="container-1200 h-16 flex items-center justify-between">
+    <a href="index.html"><img src="https://raw.githubusercontent.com/irenejieunpark/https-gheinstitute.github.io/main/ghei-logo.png" class="h-9"></a>
+
+    <nav class="hidden md:block">
+      <ul class="flex gap-6 text-sm text-slate-700">
+        <li><a href="index.html" class="hover:text-ghei">Home</a></li>
+        <li><a href="about.html" class="hover:text-ghei">About</a></li>
+        <li><a href="research.html" class="hover:text-ghei">Research</a></li>
+
+        <li class="nav-item">
+          <button class="hover:text-ghei">Programs ▼</button>
+          <div class="nav-dropdown">
+            <a href="#access" class="block px-4 py-2 hover:bg-slate-50">Cardiovascular Access</a>
+            <a href="#literacy" class="block px-4 py-2 hover:bg-slate-50">Health Literacy</a>
+            <a href="#open" class="block px-4 py-2 hover:bg-slate-50">Open Science</a>
+            <a href="#pilot" class="block px-4 py-2 hover:bg-slate-50">Multi-country Pilot</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="hover:text-ghei">Leadership ▼</button>
+          <div class="nav-dropdown">
+            <a href="leadership.html#director" class="block px-4 py-2 hover:bg-slate-50">Representative</a>
+            <a href="leadership.html#advisors" class="block px-4 py-2 hover:bg-slate-50">Advisors</a>
+            <a href="leadership.html#org" class="block px-4 py-2 hover:bg-slate-50">Organization Structure</a>
+          </div>
+        </li>
+
+        <li><a href="contact.html" class="hover:text-ghei">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="container-1200 py-16">
+  <h1 class="text-3xl font-semibold text-ghei mb-4">Programs</h1>
+  <p class="max-w-3xl text-slate-600 mb-10">
+    GHEI develops programs that advance cardiovascular equity through research,
+    technology, education, and open science. Explore our core focus areas below.
+  </p>
+
+  <div id="access" class="p-6 border rounded-xl shadow-sm mb-10">
+    <h2 class="text-xl font-semibold text-ghei mb-2">Cardiovascular Access</h2>
+    <p class="text-slate-600 text-sm">
+      Mobile PPG screening, low-cost cardiovascular tools, and multi-country deployments.
+    </p>
+  </div>
+
+  <div id="literacy" class="p-6 border rounded-xl shadow-sm mb-10">
+    <h2 class="text-xl font-semibold text-ghei mb-2">Health Literacy</h2>
+    <p class="text-slate-600 text-sm">
+      Visual, low-literacy-friendly cardiovascular education including social media impact.
+    </p>
+  </div>
+
+  <div id="open" class="p-6 border rounded-xl shadow-sm mb-10">
+    <h2 class="text-xl font-semibold text-ghei mb-2">Open Science</h2>
+    <p class="text-slate-600 text-sm">
+      Open datasets, transparent methodology, and global health resource accessibility.
+    </p>
+  </div>
+
+  <div id="pilot" class="p-6 border rounded-xl shadow-sm">
+    <h2 class="text-xl font-semibold text-ghei mb-2">Multi-country Pilot</h2>
+    <p class="text-slate-600 text-sm">
+      Planned cardiovascular screening pilots in LMIC settings using mobile PPG tools.
+    </p>
+  </div>
+</section>
+
+<footer class="bg-black text-slate-400 text-xs py-4">
+  <div class="container-1200 flex justify-between">
+    <p>© <span id="year"></span> GHEI.</p>
+    <p>Advancing cardiovascular equity for every community.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
